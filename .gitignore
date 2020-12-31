@@ -80,9 +80,10 @@ buck-out/
 
 # Bundle artifacts
 *.jsbundle
-
+*.android.bundle
 # CocoaPods
 /ios/Pods/
 
 # Expo
 .expo/*
+
