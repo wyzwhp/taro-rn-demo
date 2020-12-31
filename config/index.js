@@ -21,6 +21,17 @@ const config = {
   framework: 'react',
   rn: {
     appName: 'taroDemo',
+    plugins: [
+      [
+        'module-resolver',
+        {
+          alias: {
+            '@tarojs/components': '@tarojs/components-rn',
+            '@tarojs/taro': '@tarojs/taro-rn',
+          },
+        },
+      ]
+    ]
   },
   mini: {
     postcss: {
