@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useMemo } from "react";
 import { View, Image, Text } from '@tarojs/components';
 import { useSelector, useDispatch } from 'react-redux';
-import { getList } from '../../actions/video';
+// import { getList } from '../../actions/video';
 import Taro from '@tarojs/taro'
 import Navigator from '../../components/bt-navigator';
 import './list.scss'
@@ -9,12 +9,7 @@ export default function () {
     const group = useSelector(state => state.video.group)
     const dispatch = useDispatch()
     useEffect(() => {
-        dispatch(getList({
-            params: {
-                pageSize: 10,
-                pageNo: 1
-            }
-        }))
+        dispatch({type:'setVideoList',payload:{}})
     }, [])
     const Row = React.memo(({ index, data }: { index: number, data: any }) => {
         return <Navigator className="page_vlist_row" url={"/pages/v/detail?xh=" + index + '&id=' + data.id}>

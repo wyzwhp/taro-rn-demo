@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useMemo } from "react";
 import { ScrollView, View, Button, Text } from '@tarojs/components';
 import { useSelector, useDispatch } from 'react-redux';
-import { getFloorList } from '../../actions/floor';
+// import { getFloorList } from '../../actions/floor';
 import Taro, { usePullDownRefresh, useReachBottom } from '@tarojs/taro'
 import Header from '../../components/bt-header';
 import './index.scss'
@@ -24,7 +24,6 @@ export default function (props: any) {
   useEffect(() => {
     //页面初始化
     loadData(1, () => {
-
       setLoading(false)
     });
   }, [])
@@ -48,16 +47,17 @@ export default function (props: any) {
       //避免多次加载
       setPage(page)
       setLoading(true)
-      dispatch(getFloorList({
-        params: {
-          app: 'parent',
-          typeCode: pageName,
-          pageNo: page,
-          size: 8,
-          status: 0
-        },
-        callback
-      }))
+      //调用数据
+      // dispatch(getFloorList({
+      //   params: {
+      //     app: 'parent',
+      //     typeCode: pageName,
+      //     pageNo: page,
+      //     size: 8,
+      //     status: 0
+      //   },
+      //   callback
+      // }))
     }
   }
 

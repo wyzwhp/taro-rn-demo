@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useMemo } from "react";
 import { View, Image } from '@tarojs/components';
 import { useSelector, useDispatch } from 'react-redux';
-import { getFloorList } from '../../actions/floor';
+// import { getFloorList } from '../../actions/floor';
 import { convertPx } from '../../utils/common';
 import Taro, { usePullDownRefresh, useReachBottom, usePageScroll, useDidHide } from '@tarojs/taro'
 import Header from '../../components/bt-header';
@@ -63,16 +63,16 @@ export default function () {
             //避免多次加载
             setPage(page)
             setLoading(true)
-            dispatch(getFloorList({
-                params: {
-                    app: 'parent',
-                    typeCode: pageName,
-                    pageNo: page,
-                    size: 8,
-                    status: 0
-                },
-                callback
-            }))
+            // dispatch(getFloorList({
+            //     params: {
+            //         app: 'parent',
+            //         typeCode: pageName,
+            //         pageNo: page,
+            //         size: 8,
+            //         status: 0
+            //     },
+            //     callback
+            // }))
         }
     }
     //设置透明度
