@@ -1,0 +1,4 @@
+.fixed-header{
+    margin-top: calc(constant(safe-area-inset-top)+44); 
+    margin-top: calc(env(safe-area-inset-top)+ 44);
+}

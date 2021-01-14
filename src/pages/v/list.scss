@@ -1,0 +1,72 @@
+@import '../../common.scss';
+.page_vlist{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: center;
+    width: 100%;
+    background-color: #f8f8f8;
+
+    padding-left: 16px;
+    padding-right: 16px;
+     /*  #ifndef  rn  */
+    box-sizing: border-box;
+     /*  #endif  */
+    &_column{
+        width:351px;
+        display: flex;
+        flex-direction: column;
+    }
+    &_row{
+        display: flex;
+        width:351px;
+        background-color: #fff;
+        margin-bottom:16px;
+        border-radius: 8px;
+        overflow: hidden;
+        flex-direction: column;
+    }
+    &_title{
+        font-size: 24px;
+        color: #333;
+        display: flex;
+        //width: 100%;
+        margin: 16px;
+        line-height: 32px;
+        /*  #ifndef  rn  */
+        box-sizing: border-box;
+       @include lines-ellipsis(2);
+       /*  #endif  */
+    
+    }
+    &_group{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 16px;
+        margin-top:0;
+    }
+    &_img{
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+    }
+    &_user{
+        flex:1;
+        font-size: 24px;
+        margin-right: 8px;
+        margin-left: 8px;
+        color: #999;
+         /*  #ifndef  rn  */
+         @include singleline-ellipsis;
+         /*  #endif  */
+    }
+    &_num{
+        font-size: 24px;
+        color: #ccc;
+         /*  #ifndef  rn  */
+         @include singleline-ellipsis;
+         /*  #endif  */
+    }
+}

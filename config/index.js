@@ -21,6 +21,12 @@ const config = {
   framework: 'react',
   rn: {
     appName: 'taroDemo',
+    output: {
+      ios: './ios/main.jsbundle',
+      iosAssetsDest: './ios',
+      android: './android/app/src/main/assets/index.android.bundle',
+      androidAssetsDest: './android/app/src/main/res'
+    },
     plugins: [
       [
         'module-resolver',

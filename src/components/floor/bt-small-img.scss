@@ -1,0 +1,64 @@
+@import './template.scss';
+@import '../../common.scss';
+.floor_small_img{
+    display: flex;
+    flex-direction: column;
+    &_con{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        height: 290px;
+        width: 750px;
+        margin-left: -32px;
+
+    }
+    &_h1{
+        font-size: 36px;
+        display: flex;
+        padding-top:6px;
+        padding-bottom: 6px;
+        margin-bottom: 24px;
+        font-weight: bold;
+    }
+    &_item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        overflow: hidden;
+        width: 212px;
+        height: 292px;
+        margin-right: 16px;
+
+        flex:0 0 212px;
+        &_begin{
+            width:16px;
+            flex:0 0 16px;
+            background-color: transparent;
+        }
+        &_end{
+            width:0px;
+            flex:0 0 16px;
+            //margin-right: 0;
+            background-color: transparent;
+        }
+    }
+    &_text{
+        overflow: hidden;
+        min-width: 0;
+        height: 64px;
+        display: flex;
+        width: 100%;
+    }
+    
+    &_title{
+        font-size: 24px;
+        color:#333;
+        line-height: 32px;
+        /*  #ifndef  rn  */
+        @include lines-ellipsis(2);
+        /*  #endif  */
+    }
+}
+
+

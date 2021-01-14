@@ -1,0 +1,36 @@
+@import './template.scss';
+.floor_search{
+    flex-direction: row;   
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    display: flex;
+    /*  #ifndef  rn  */
+    box-sizing: border-box;
+    .swiper-container{
+        width: 100%;
+    }
+    /*  #endif  */
+    &_con{
+        flex-direction: row; 
+        background-color: #f8f8f8;
+        justify-content: flex-start;
+        align-items: center;
+        overflow: hidden;
+        display: flex;
+        flex:1;
+    }
+    &_item{
+        justify-content: flex-start;
+        align-items:center ;
+        display: flex;
+        flex-direction: row;
+    }
+    &_text{
+        color:#ccc;
+    }
+    &_swiper{
+        display: flex;
+        flex:1;
+    }
+}

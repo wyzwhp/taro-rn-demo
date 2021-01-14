@@ -1,0 +1,32 @@
+.bt-navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+     /*  #ifndef  rn  */
+    position: fixed;
+    top:0;
+    right: 0;
+    left: 0;
+    z-index: 10000;
+     /*  #endif  */
+    &-con{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        &-left{
+            flex:1;
+        }
+        &-right{
+            flex:1;
+        }
+        &-title{
+           font-size: 32px;
+           font-weight: bold;
+           flex:2;
+           text-align: center;
+        
+        }
+    }
+}

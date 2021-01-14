@@ -1,0 +1,33 @@
+.hasStatusBar{
+    height: constant(safe-area-inset-top); 
+    height: env(safe-area-inset-top);
+}
+.btNavBar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.btNavBar-con{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    &-left{
+        flex:1;
+    }
+    &-right{
+        flex:1;
+    }
+    &-title{
+       font-size: 32px;
+       font-weight: bolder;
+       flex:2;
+       text-align: center;
+	   font-size: 28rpx;
+	   overflow: hidden;
+       text-overflow: ellipsis;
+       white-space: nowrap;
+       width: 0;
+    }
+}

@@ -1,0 +1,16 @@
+@mixin singleline-ellipsis{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/* 多行文字省略号 */
+@mixin lines-ellipsis($num){
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* autoprefixer: off */
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: $num;
+    -webkit-box-orient: vertical;
+    /* autoprefixer: on */
+  }
